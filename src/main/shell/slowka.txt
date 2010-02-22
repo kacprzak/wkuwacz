@@ -1,0 +1,12 @@
+﻿# W tym pliku można edytować pary słówek wykorzystywanych w programie.
+# Plik można edytować w dowolnym programie (np. Notatnik), ale musi być kodowany
+# w UTF-8.
+
+kangur = canguro
+krokodyl = cocodrilo
+lew = león
+lis = zorro
+małpa = mono
+niedźwiedź = oso
+nosorożec = rinoceronte
+sarna = corzo

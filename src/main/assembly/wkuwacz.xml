@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : assembly.xml
+    Created on : 20 luty 2010, 18:05
+    Author     : Marcin Kacprzak
+    Description:
+        Maven assembly descriptor.
+-->
+
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>libs</outputDirectory>
+      <unpack>false</unpack>
+      <scope>runtime</scope>
+      <excludes>
+        <exclude>junit:junit</exclude>
+      </excludes>
+    </dependencySet>
+  </dependencySets>
+  <fileSets>
+    <fileSet>
+      <directory>src/main/shell</directory>
+      <outputDirectory></outputDirectory>
+      <includes>
+        <include>**/*.bat</include>
+        <include>**/*.sh</include>
+        <include>**/*.txt</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</assembly>
+
