@@ -5,7 +5,7 @@
     <groupId>pl.kacprzak</groupId>
     <artifactId>wkuwacz</artifactId>
     <packaging>jar</packaging>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.1.2</version>
     <name>Wkuwacz</name>
     <url>http://www.entertech.com.pl/mkzone</url>
     <description>Program do nauki s\u0142\u00F3wek.</description>
@@ -171,13 +171,22 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-assembly-plugin</artifactId>
-                        <configuration>
-                            <descriptors>
-                                <descriptor>src/main/assembly/linux32.xml</descriptor>
-                                <descriptor>src/main/assembly/linux64.xml</descriptor>
-                                <descriptor>src/main/assembly/win32.xml</descriptor>
-                            </descriptors>
-                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>assemble-binary</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>single</goal>
+                                </goals>
+                                <configuration>
+                                    <descriptors>
+                                        <descriptor>src/main/assembly/linux32.xml</descriptor>
+                                        <descriptor>src/main/assembly/linux64.xml</descriptor>
+                                        <descriptor>src/main/assembly/win32.xml</descriptor>
+                                    </descriptors>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
@@ -200,6 +209,17 @@
             </dependencies>
         </profile>
     </profiles>
-
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://entertech.dyndns.org:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://entertech.dyndns.org:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
 

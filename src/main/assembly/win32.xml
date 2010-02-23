@@ -39,6 +39,13 @@
                 <include>**/*.txt</include>
             </includes>
         </fileSet>
+        <fileSet>
+            <directory></directory>
+            <outputDirectory></outputDirectory>
+            <includes>
+                <include>*.txt</include>
+            </includes>
+        </fileSet>
     </fileSets>
 </assembly>
 
