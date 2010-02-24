@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : site.xml
+    Created on : February 24, 2010, 2:43 PM
+    Author     : Marcin Kacprzak
+    Description:
+        Maven site descriptor.
+-->
+
+<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+  <body>
+
+    <menu name="Wkuwacz">
+        <item name="O programie" href="index.html"/>
+    </menu>
+    <menu ref="reports"/>
+
+  </body>
+</project>
+

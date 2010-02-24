@@ -18,7 +18,7 @@ class Words implements IWords {
 	public String getHint(String text) {
 		if (lastTaken == -1)
 			throw new IllegalArgumentException();
-		// TODO Auto-generated method stub
+
 		String hintWord = wordsRight.get(lastTaken);
 		if (hintWord.startsWith(text)) {
 			if (hintWord.length() == text.length())

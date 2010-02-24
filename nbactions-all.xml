@@ -48,4 +48,15 @@
                 <goal>deploy</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-Site</actionName>
+            <displayName>Site</displayName>
+            <goals>
+                <goal>site</goal>
+                
+            </goals>
+            <activatedProfiles>
+                <activatedProfile>all</activatedProfile>
+            </activatedProfiles>
+        </action>
     </actions>

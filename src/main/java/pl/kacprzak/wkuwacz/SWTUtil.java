@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package pl.kacprzak.wkuwacz;
 
 import org.eclipse.swt.graphics.Point;
@@ -10,8 +5,7 @@ import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Shell;
 
 /**
- *
- * @author kaczor
+ * @author Marcin Kacprzak
  */
 public class SWTUtil {
     public static void center(Shell shell) {

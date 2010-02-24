@@ -1,6 +1,3 @@
-/**
- * 
- */
 package pl.kacprzak.wkuwacz;
 
 import java.io.File;
@@ -29,7 +26,6 @@ import org.eclipse.swt.widgets.Text;
 
 /**
  * @author Marcin Kacprzak
- * 
  */
 class WkuwaczGUI {
 
@@ -188,7 +184,6 @@ class WkuwaczGUI {
 			}
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			shell.close();
 		}

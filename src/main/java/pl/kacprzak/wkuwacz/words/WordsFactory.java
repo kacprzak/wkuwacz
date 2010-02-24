@@ -5,30 +5,33 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class WordsFactory {
-	
-	public static IWords getWords(File wordsFile) throws FileNotFoundException {
-		
+
+    public static IWords getWords(File wordsFile) throws FileNotFoundException {
+
         Words words = new Words();
-		
-		Scanner scanner = new Scanner(wordsFile, "UTF-8");
 
-        while (scanner.hasNextLine())
-        {
-           String line = scanner.nextLine();
+        Scanner scanner = new Scanner(wordsFile, "UTF-8");
 
-           if (line.startsWith("#")) continue;
-           if (!line.contains("=")) continue;
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
 
-           String[] pairOfWords = line.split("=", 2);
-           pairOfWords[0] = pairOfWords[0].trim();
-           pairOfWords[1] = pairOfWords[1].trim();
+            if (line.startsWith("#")) {
+                continue;
+            }
+            if (!line.contains("=")) {
+                continue;
+            }
 
-           //TEST
-           //System.out.println(pairOfWords[0] + " = " + pairOfWords[1]);
+            String[] pairOfWords = line.split("=", 2);
+            pairOfWords[0] = pairOfWords[0].trim();
+            pairOfWords[1] = pairOfWords[1].trim();
 
-           words.add(pairOfWords[0], pairOfWords[1]);
+            //TEST
+            //System.out.println(pairOfWords[0] + " = " + pairOfWords[1]);
+
+            words.add(pairOfWords[0], pairOfWords[1]);
         }
-        
-		return words;
-	}
+
+        return words;
+    }
 }

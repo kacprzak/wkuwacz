@@ -1,18 +1,12 @@
-/**
- * 
- */
 package pl.kacprzak.wkuwacz.words;
 
 /**
  * @author Marcin Kacprzak
- *
  */
 public interface IWords {
 	
 	/**
 	 * Lesson type.
-	 * @author Marcin Kacprzak
-	 *
 	 */
 	static enum Type {
 		ONLY_ONCE, UNTIL_SUCCES
