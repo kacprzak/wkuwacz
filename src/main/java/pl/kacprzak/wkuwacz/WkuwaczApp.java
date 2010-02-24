@@ -27,9 +27,8 @@ public class WkuwaczApp extends WkuwaczGUI {
     private void initModel() {
 
         try {
-            words = WordsFactory.getWords(new File("slowka.txt")); //$NON-NLS-1$
+            words = WordsFactory.getWords(new File("slowka.txt"));
             reset();
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             shell.close();
@@ -46,7 +45,6 @@ public class WkuwaczApp extends WkuwaczGUI {
     private void addListeners() {
         // Printing information to stdout whem main window is disposed.
         shell.addDisposeListener(new DisposeListener() {
-
             @Override
             public void widgetDisposed(DisposeEvent e) {
                 System.out.println("Ending: " + Messages.getString("APP_NAME")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -55,7 +53,6 @@ public class WkuwaczApp extends WkuwaczGUI {
 
         // Closing main window.
         exitItem.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -64,7 +61,6 @@ public class WkuwaczApp extends WkuwaczGUI {
         });
 
         nextBtn.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -73,7 +69,6 @@ public class WkuwaczApp extends WkuwaczGUI {
         });
 
         aboutItem.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -83,14 +78,16 @@ public class WkuwaczApp extends WkuwaczGUI {
         });
 
         SelectionListener readyListener = new SelectionListener() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 if (words.isCorrect(text2.getText())) {
-                    statusBar.setText(Messages.getString("WkuwaczApp.3")); //$NON-NLS-1$
+                    statusBar.setText(Messages.getString("WkuwaczApp.3"));
                     nextWord();
                 } else {
-                    statusBar.setText(Messages.getString("WkuwaczApp.4") + " " + text1.getText() + " " + Messages.getString("WkuwaczApp.6") + " " + words.getCorrect()); //$NON-NLS-1$
+                    statusBar.setText(Messages.getString("WkuwaczApp.4") + " "
+                            + text1.getText() + " "
+                            + Messages.getString("WkuwaczApp.6") + " "
+                            + words.getCorrect());
                 }
                 updateInfo();
                 nextWord();
@@ -106,7 +103,6 @@ public class WkuwaczApp extends WkuwaczGUI {
         text2.addSelectionListener(readyListener);
 
         restartItem.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -115,7 +111,6 @@ public class WkuwaczApp extends WkuwaczGUI {
         });
 
         hintBtn.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -125,7 +120,6 @@ public class WkuwaczApp extends WkuwaczGUI {
         });
 
         firstToSecondItem.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -138,7 +132,6 @@ public class WkuwaczApp extends WkuwaczGUI {
         });
 
         secondToFirstItem.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -151,7 +144,6 @@ public class WkuwaczApp extends WkuwaczGUI {
         });
 
         onlyOnceItem.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -162,7 +154,6 @@ public class WkuwaczApp extends WkuwaczGUI {
         });
 
         untilSuccesItem.addSelectionListener(new SelectionAdapter() {
-
             @Override
             public void widgetSelected(SelectionEvent e) {
                 super.widgetSelected(e);
@@ -213,9 +204,9 @@ public class WkuwaczApp extends WkuwaczGUI {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("Starting: " + Messages.getString("APP_NAME")); //$NON-NLS-1$ //$NON-NLS-2$
-        System.out.println("Platform: " + SWT.getPlatform()); //$NON-NLS-1$
-        System.out.println("Version: " + SWT.getVersion()); //$NON-NLS-1$
+        System.out.println("Starting: " + Messages.getString("APP_NAME"));
+        System.out.println("Platform: " + SWT.getPlatform());
+        System.out.println("Version: " + SWT.getVersion());
 
         Display display = new Display();
         new WkuwaczApp(display);

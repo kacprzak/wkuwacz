@@ -9,14 +9,12 @@ public interface IWords {
      * Lesson type.
      */
     static enum Type {
-
         ONLY_ONCE, UNTIL_SUCCES
     };
 
     /**
-     * Return one word from the list. It never returns the same word
+     * @return one word from the list. It never returns the same word
      * two times in a row.
-     * @return
      */
     String getWord();
 
@@ -28,26 +26,22 @@ public interface IWords {
     boolean isCorrect(String anserw);
 
     /**
-     * Returns correct for last taken word.
-     * @return
+     * @return correct for last taken word.
      */
     String getCorrect();
 
     /**
-     * Returns hint for last taken word.
-     * @return
+     * @return hint for last taken word.
      */
     String getHint(String text);
 
     /**
-     * Number of hints taken.
-     * @return
+     * @return number of hints taken.
      */
     int getHintsNum();
 
     /**
-     * Number of wrong anserws
-     * @return
+     * @return number of wrong anserws.
      */
     int getErrorsNum();
 
@@ -63,8 +57,7 @@ public interface IWords {
     int getWordsLeftNum();
 
     /**
-     * Returns number of elements.
-     * @return
+     * @return number of elements.
      */
     int getLength();
 
@@ -75,7 +68,7 @@ public interface IWords {
 
     boolean isReversed();
 
-    public Type getType();
+    Type getType();
 
-    public void setType(Type type);
+    void setType(Type type);
 }

@@ -9,6 +9,13 @@ import org.eclipse.swt.widgets.Shell;
  */
 public class SWTUtil {
 
+    private SWTUtil() {}
+
+    /**
+     * Centers the window.
+     * 
+     * @param shell
+     */
     public static void center(Shell shell) {
         Rectangle bds = shell.getDisplay().getBounds();
         Point p = shell.getSize();

@@ -60,7 +60,6 @@ class Words implements IWords {
             deactivated.add(lastTaken);
             return true;
         } else {
-
             // Every word will be active only once
             if (type == Type.ONLY_ONCE)
                 deactivated.add(lastTaken);
@@ -106,11 +105,9 @@ class Words implements IWords {
     @Override
     public void revers(boolean reversed) {
         if (this.reversed != reversed) {
-
             ArrayList<String> tmp = wordsLeft;
             wordsLeft = wordsRight;
             wordsRight = tmp;
-
             this.reversed = reversed;
         }
     }

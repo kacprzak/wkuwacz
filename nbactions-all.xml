@@ -59,4 +59,11 @@
                 <activatedProfile>all</activatedProfile>
             </activatedProfiles>
         </action>
+        <action>
+            <actionName>CUSTOM-Checkstyle</actionName>
+            <displayName>Checkstyle</displayName>
+            <goals>
+                <goal>checkstyle:checkstyle</goal>
+            </goals>
+        </action>
     </actions>

@@ -50,11 +50,12 @@ class WkuwaczGUI {
     protected MenuItem onlyOnceItem;
     protected MenuItem aboutItem;
 
-    protected WkuwaczGUI(Display display) {
+    protected WkuwaczGUI(final Display display) {
         // Window can't be resized or maximized.
         shell = new Shell(display, SWT.SHELL_TRIM ^ (SWT.RESIZE | SWT.MAX));
-        // shell = new Shell(display);
-        shell.setText(Messages.getString("APP_NAME") + " " + Messages.getString("APP_VERSION")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+
+        shell.setText(Messages.getString("APP_NAME") + " "
+                + Messages.getString("APP_VERSION"));
 
         // SWT UI Initialization.
         initUI();
@@ -63,7 +64,6 @@ class WkuwaczGUI {
         shell.pack();
         // Centering the app window.
         SWTUtil.center(shell);
-
         shell.open();
 
         // Main event loop.
@@ -93,8 +93,7 @@ class WkuwaczGUI {
         initInfo();
 
         // Two text fields. The first one shows the word (maybe it should be
-        // Label),
-        // the seconde text field is for entering the aserw.
+        // Label), the seconde text field is for entering the aserw.
 
         text1 = new Text(shell, SWT.BORDER | SWT.READ_ONLY);
         FormData data = new FormData();
@@ -144,8 +143,6 @@ class WkuwaczGUI {
     /**
      * Builds buttons for lettersGroup. This group has letters that are handy
      * for users who don't have special characters on keyboard.
-     *
-     * @param lettersGroup
      */
     protected void initLetters() {
 
@@ -204,30 +201,26 @@ class WkuwaczGUI {
         final int width = 30;
         final int gridDataStyle = GridData.HORIZONTAL_ALIGN_END;
 
-        new Label(infoGroup, SWT.NONE).setText(Messages.getString("WkuwaczGUI.12")); //$NON-NLS-1$
+        new Label(infoGroup, SWT.NONE).setText(Messages.getString("WkuwaczGUI.12"));
         allWords = new Label(infoGroup, SWT.RIGHT);
-        //allWords.setText(Messages.getString("WkuwaczGUI.13")); //$NON-NLS-1$
         GridData gridData = new GridData(gridDataStyle);
         allWords.setLayoutData(gridData);
         gridData.widthHint = width;
 
-        new Label(infoGroup, SWT.NONE).setText(Messages.getString("WkuwaczGUI.14")); //$NON-NLS-1$
+        new Label(infoGroup, SWT.NONE).setText(Messages.getString("WkuwaczGUI.14"));
         wordsLeft = new Label(infoGroup, SWT.RIGHT);
-        //wordsLeft.setText(Messages.getString("WkuwaczGUI.15")); //$NON-NLS-1$
         gridData = new GridData(gridDataStyle);
         wordsLeft.setLayoutData(gridData);
         gridData.widthHint = width;
 
-        new Label(infoGroup, SWT.NONE).setText(Messages.getString("WkuwaczGUI.16")); //$NON-NLS-1$
+        new Label(infoGroup, SWT.NONE).setText(Messages.getString("WkuwaczGUI.16"));
         wrongWords = new Label(infoGroup, SWT.RIGHT);
-        //wrongWords.setText(Messages.getString("WkuwaczGUI.17")); //$NON-NLS-1$
         gridData = new GridData(gridDataStyle);
         wrongWords.setLayoutData(gridData);
         gridData.widthHint = width;
 
-        new Label(infoGroup, SWT.NONE).setText(Messages.getString("WkuwaczGUI.18")); //$NON-NLS-1$
+        new Label(infoGroup, SWT.NONE).setText(Messages.getString("WkuwaczGUI.18"));
         hints = new Label(infoGroup, SWT.RIGHT);
-        //hints.setText(Messages.getString("WkuwaczGUI.19")); //$NON-NLS-1$
         gridData = new GridData(gridDataStyle);
         hints.setLayoutData(gridData);
         gridData.widthHint = width;
@@ -240,13 +233,14 @@ class WkuwaczGUI {
     protected void initStatusBar() {
         // Create a label with a border
         statusBar = new CLabel(shell, SWT.BORDER);
-        statusBar.setText(Messages.getString("WkuwaczGUI.20")); //$NON-NLS-1$
+        statusBar.setText(Messages.getString("WkuwaczGUI.20"));
+
         FormData data = new FormData();
+
         statusBar.setLayoutData(data);
         data.bottom = new FormAttachment(100, 0);
         data.left = new FormAttachment(0, 0);
         data.right = new FormAttachment(100, 0);
-
     }
 
     /**
@@ -256,62 +250,61 @@ class WkuwaczGUI {
         // Creating MENU
         Menu menuBar = new Menu(shell, SWT.BAR);
         MenuItem cascadeFileMenu = new MenuItem(menuBar, SWT.CASCADE);
-        cascadeFileMenu.setText(Messages.getString("WkuwaczGUI.21")); //$NON-NLS-1$
+        cascadeFileMenu.setText(Messages.getString("WkuwaczGUI.21"));
 
         Menu fileMenu = new Menu(shell, SWT.DROP_DOWN);
         cascadeFileMenu.setMenu(fileMenu);
 
         restartItem = new MenuItem(fileMenu, SWT.PUSH);
-        restartItem.setText(Messages.getString("WkuwaczGUI.22")); //$NON-NLS-1$
+        restartItem.setText(Messages.getString("WkuwaczGUI.22"));
 
         exitItem = new MenuItem(fileMenu, SWT.PUSH);
-        exitItem.setText(Messages.getString("WkuwaczGUI.23")); //$NON-NLS-1$
+        exitItem.setText(Messages.getString("WkuwaczGUI.23"));
 
         // Menu "Settings"
         MenuItem cascadeSettingsMenu = new MenuItem(menuBar, SWT.CASCADE);
-        cascadeSettingsMenu.setText(Messages.getString("WkuwaczGUI.24")); //$NON-NLS-1$
+        cascadeSettingsMenu.setText(Messages.getString("WkuwaczGUI.24"));
 
         Menu settingsMenu = new Menu(shell, SWT.DROP_DOWN);
         cascadeSettingsMenu.setMenu(settingsMenu);
 
         firstToSecondItem = new MenuItem(settingsMenu, SWT.RADIO);
-        firstToSecondItem.setText(Messages.getString("WkuwaczGUI.25")); //$NON-NLS-1$
+        firstToSecondItem.setText(Messages.getString("WkuwaczGUI.25"));
         firstToSecondItem.setSelection(true);
 
         secondToFirstItem = new MenuItem(settingsMenu, SWT.RADIO);
-        secondToFirstItem.setText(Messages.getString("WkuwaczGUI.26")); //$NON-NLS-1$
+        secondToFirstItem.setText(Messages.getString("WkuwaczGUI.26"));
 
         new MenuItem(settingsMenu, SWT.SEPARATOR);
 
         final MenuItem cascadeLearningTypeMenu = new MenuItem(settingsMenu,
                 SWT.CASCADE);
-        cascadeLearningTypeMenu.setText(Messages.getString("WkuwaczGUI.27")); //$NON-NLS-1$
+        cascadeLearningTypeMenu.setText(Messages.getString("WkuwaczGUI.27"));
 
         Menu learningTypeMenu = new Menu(shell, SWT.DROP_DOWN);
         cascadeLearningTypeMenu.setMenu(learningTypeMenu);
 
         untilSuccesItem = new MenuItem(learningTypeMenu, SWT.RADIO);
-        untilSuccesItem.setText(Messages.getString("WkuwaczGUI.28")); //$NON-NLS-1$
+        untilSuccesItem.setText(Messages.getString("WkuwaczGUI.28"));
         untilSuccesItem.setSelection(true);
 
         onlyOnceItem = new MenuItem(learningTypeMenu, SWT.RADIO);
-        onlyOnceItem.setText(Messages.getString("WkuwaczGUI.29")); //$NON-NLS-1$
+        onlyOnceItem.setText(Messages.getString("WkuwaczGUI.29"));
 
         // Menu "Help"
         MenuItem cascadeHelpMenu = new MenuItem(menuBar, SWT.CASCADE);
-        cascadeHelpMenu.setText(Messages.getString("WkuwaczGUI.30")); //$NON-NLS-1$
+        cascadeHelpMenu.setText(Messages.getString("WkuwaczGUI.30"));
 
         Menu helpMenu = new Menu(shell, SWT.DROP_DOWN);
         cascadeHelpMenu.setMenu(helpMenu);
 
         aboutItem = new MenuItem(helpMenu, SWT.PUSH);
-        aboutItem.setText(Messages.getString("WkuwaczGUI.31")); //$NON-NLS-1$
+        aboutItem.setText(Messages.getString("WkuwaczGUI.31"));
 
         shell.setMenuBar(menuBar);
     }
 
     private class LetterSelectionAdapter extends SelectionAdapter {
-
         @Override
         public void widgetSelected(SelectionEvent e) {
             super.widgetSelected(e);
