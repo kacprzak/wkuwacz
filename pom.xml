@@ -257,7 +257,7 @@
         </snapshotRepository>
         <site>
             <id>website</id>
-            <url>scp://entertech.dyndns.org/home/kacprzak/public_html/wkuwacz/</url>
+            <url>scp://kacprzak@entertech.dyndns.org/home/kacprzak/public_html/wkuwacz/</url>
         </site>
     </distributionManagement>
 
