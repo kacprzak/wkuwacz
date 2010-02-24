@@ -256,8 +256,8 @@
             <url>http://entertech.dyndns.org:8081/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
         <site>
-            <id>website</id>
-            <url>scp://kacprzak@entertech.dyndns.org/home/kacprzak/public_html/wkuwacz/</url>
+            <id>wkuwacz.website</id>
+            <url>scp://entertech.dyndns.org/home/kacprzak/public_html/wkuwacz/</url>
         </site>
     </distributionManagement>
 

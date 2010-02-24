@@ -8,6 +8,7 @@ import org.eclipse.swt.widgets.Shell;
  * @author Marcin Kacprzak
  */
 public class SWTUtil {
+
     public static void center(Shell shell) {
         Rectangle bds = shell.getDisplay().getBounds();
         Point p = shell.getSize();

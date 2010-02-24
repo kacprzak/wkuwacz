@@ -15,19 +15,15 @@ public class WordsFactory {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
 
-            if (line.startsWith("#")) {
+            if (line.startsWith("#"))
                 continue;
-            }
-            if (!line.contains("=")) {
+
+            if (!line.contains("="))
                 continue;
-            }
 
             String[] pairOfWords = line.split("=", 2);
             pairOfWords[0] = pairOfWords[0].trim();
             pairOfWords[1] = pairOfWords[1].trim();
-
-            //TEST
-            //System.out.println(pairOfWords[0] + " = " + pairOfWords[1]);
 
             words.add(pairOfWords[0], pairOfWords[1]);
         }
