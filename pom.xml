@@ -12,6 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.license>gpl30</netbeans.hint.license>
     </properties>
 
     <build>
@@ -99,7 +100,7 @@
     </licenses>
 
     <scm>
-        <developerConnection>scm:svn+ssh://entertech.dyndns.org/home/kacprzak/svn-repos/wkuwacz/trunk/</developerConnection>
+        <developerConnection>scm:svn+ssh://entertech.dyndns.org/home/kacprzak/svn-repos/wkuwacz/trunk</developerConnection>
     </scm>
 
     <issueManagement>
@@ -305,6 +306,16 @@
                     <linkXref>true</linkXref>
                     <targetJdk>1.6</targetJdk>
                 </configuration>
+            </plugin>
+            
+            <!--plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changelog-plugin</artifactId>
+            </plugin-->
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>taglist-maven-plugin</artifactId>
             </plugin>
             
         </plugins>

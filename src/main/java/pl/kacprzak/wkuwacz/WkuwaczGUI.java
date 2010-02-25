@@ -1,3 +1,20 @@
+/*
+ *  Copyright (C) 2010 Marcin Kacprzak <martin.kacprzak at gmail.com>
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package pl.kacprzak.wkuwacz;
 
 import java.io.File;
@@ -25,7 +42,8 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
 /**
- * @author Marcin Kacprzak
+ *
+ * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
  */
 class WkuwaczGUI {
 
@@ -114,7 +132,7 @@ class WkuwaczGUI {
         // The most important buttons for the application :)
 
         readyBtn = new Button(shell, SWT.PUSH);
-        readyBtn.setText(Messages.getString("WkuwaczGUI.4")); //$NON-NLS-1$
+        readyBtn.setText(Messages.getString("WkuwaczGUI.4"));
         data = new FormData();
         readyBtn.setLayoutData(data);
         data.top = new FormAttachment(text2, 5, SWT.BOTTOM);
@@ -122,7 +140,7 @@ class WkuwaczGUI {
         data.right = new FormAttachment(infoGroup, -5, SWT.LEFT);
 
         nextBtn = new Button(shell, SWT.PUSH);
-        nextBtn.setText(Messages.getString("WkuwaczGUI.5")); //$NON-NLS-1$
+        nextBtn.setText(Messages.getString("WkuwaczGUI.5"));
         data = new FormData();
         nextBtn.setLayoutData(data);
         data.top = new FormAttachment(readyBtn, 5, SWT.BOTTOM);
@@ -130,7 +148,7 @@ class WkuwaczGUI {
         data.right = new FormAttachment(infoGroup, -5, SWT.LEFT);
 
         hintBtn = new Button(shell, SWT.PUSH);
-        hintBtn.setText(Messages.getString("WkuwaczGUI.6")); //$NON-NLS-1$
+        hintBtn.setText(Messages.getString("WkuwaczGUI.6"));
         data = new FormData();
         hintBtn.setLayoutData(data);
         data.top = new FormAttachment(nextBtn, 5, SWT.BOTTOM);
@@ -147,7 +165,7 @@ class WkuwaczGUI {
     protected void initLetters() {
 
         lettersGroup = new Group(shell, SWT.SHADOW_NONE);
-        lettersGroup.setText(Messages.getString("WkuwaczGUI.7")); //$NON-NLS-1$
+        lettersGroup.setText(Messages.getString("WkuwaczGUI.7"));
         RowLayout lettersLayout = new RowLayout();
         lettersGroup.setLayout(lettersLayout);
         FormData data = new FormData();
@@ -189,7 +207,7 @@ class WkuwaczGUI {
     protected void initInfo() {
 
         infoGroup = new Group(shell, SWT.SHADOW_NONE);
-        infoGroup.setText(Messages.getString("WkuwaczGUI.11")); //$NON-NLS-1$
+        infoGroup.setText(Messages.getString("WkuwaczGUI.11"));
         GridLayout infoLayout = new GridLayout(2, false);
         infoGroup.setLayout(infoLayout);
         FormData data = new FormData();

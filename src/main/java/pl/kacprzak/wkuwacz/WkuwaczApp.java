@@ -1,3 +1,20 @@
+/*
+ *  Copyright (C) 2010 Marcin Kacprzak <martin.kacprzak at gmail.com>
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package pl.kacprzak.wkuwacz;
 
 import java.io.File;
@@ -16,16 +33,19 @@ import pl.kacprzak.wkuwacz.words.IWords;
 import pl.kacprzak.wkuwacz.words.WordsFactory;
 import pl.kacprzak.wkuwacz.words.IWords.Type;
 
-public class WkuwaczApp extends WkuwaczGUI {
+/**
+ *
+ * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ */
+public final class WkuwaczApp extends WkuwaczGUI {
 
     private IWords words;
 
-    protected WkuwaczApp(Display display) {
+    protected WkuwaczApp(final Display display) {
         super(display);
     }
 
     private void initModel() {
-
         try {
             words = WordsFactory.getWords(new File("slowka.txt"));
             reset();
@@ -47,7 +67,7 @@ public class WkuwaczApp extends WkuwaczGUI {
         shell.addDisposeListener(new DisposeListener() {
             @Override
             public void widgetDisposed(DisposeEvent e) {
-                System.out.println("Ending: " + Messages.getString("APP_NAME")); //$NON-NLS-1$ //$NON-NLS-2$
+                System.out.println("Ending: " + Messages.getString("APP_NAME"));
             }
         });
 
@@ -173,7 +193,7 @@ public class WkuwaczApp extends WkuwaczGUI {
         words.reset();
         updateInfo();
         nextWord();
-        statusBar.setText(Messages.getString("WkuwaczApp.5")); //$NON-NLS-1$
+        statusBar.setText(Messages.getString("WkuwaczApp.5"));
     }
 
     /**
@@ -184,7 +204,7 @@ public class WkuwaczApp extends WkuwaczGUI {
 
         if (nextWord != null) {
             text1.setText(nextWord);
-            text2.setText(""); //$NON-NLS-1$
+            text2.setText("");
         } else {
             // do nothing
         }
@@ -201,7 +221,7 @@ public class WkuwaczApp extends WkuwaczGUI {
     }
 
     /**
-     * @param args
+     * @param args application arguments.
      */
     public static void main(String[] args) {
         System.out.println("Starting: " + Messages.getString("APP_NAME"));

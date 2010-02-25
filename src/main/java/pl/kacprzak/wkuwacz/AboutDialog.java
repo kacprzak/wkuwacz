@@ -1,3 +1,20 @@
+/*
+ *  Copyright (C) 2010 Marcin Kacprzak <martin.kacprzak at gmail.com>
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package pl.kacprzak.wkuwacz;
 
 import org.eclipse.swt.SWT;
@@ -14,14 +31,18 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
-public class AboutDialog extends Dialog {
+/**
+ *
+ * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ */
+public final class AboutDialog extends Dialog {
     private Font font;
 
-    public AboutDialog(Shell parent) {
+    public AboutDialog(final Shell parent) {
         this(parent, SWT.DIALOG_TRIM | SWT.APPLICATION_MODAL);
     }
 
-    public AboutDialog(Shell parent, int style) {
+    public AboutDialog(final Shell parent, int style) {
         super(parent, style);
         setText(Messages.getString("AboutDialog.0"));
     }
