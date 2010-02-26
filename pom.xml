@@ -87,10 +87,19 @@
             <name>Marcin Kacprzak</name>
             <email>martin.kacprzak::at::gmail.com</email>
             <roles>
-                <role>Developer</role>
+                <role>developer</role>
             </roles>
         </developer>
     </developers>
+    <contributors>
+        <contributor>
+            <name>Bartłomiej Wojdyło</name>
+            <email>redwojdylo::at::interia.pl</email>
+            <roles>
+                <role>tester</role>
+            </roles>
+        </contributor>
+    </contributors>
 
     <licenses>
         <license>
