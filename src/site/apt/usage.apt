@@ -1,0 +1,9 @@
+Konfiguracja programu
+
+  Aby dodawać słówka do programu wystarczy wyedytować plik "slowka.txt"
+  np. w Notatniku. Można przygotować sobie kilka plików "slowka.txt",
+  a następnie podmieniać je przed uruchomieniem programu. Jeśli ktoś
+  przygotował już takie pliki to proszę o kontakt w celu zamieszczenia
+  ich na tej stronie. Plik dostarczany z programem zawiera tylko osiem par
+  słówek więc nie jest zbyt rozbudowany. Poprzez edycję pliku "chars.txt"
+  można ustawić znaki z różnych alfabetów w interfejsie programu.

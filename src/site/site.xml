@@ -15,6 +15,7 @@
 
     <menu name="Wkuwacz">
         <item name="O programie" href="index.html"/>
+        <item name="Konfiguracja" href="usage.html"/>
         <item name="Download" href="http://entertech.dyndns.org:8081/nexus/content/repositories/releases/pl/kacprzak/wkuwacz/"/>
     </menu>
     <menu ref="reports"/>

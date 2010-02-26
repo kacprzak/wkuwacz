@@ -47,6 +47,9 @@
                 <goal>clean</goal>
                 <goal>deploy</goal>
             </goals>
+            <activatedProfiles>
+                <activatedProfile>all</activatedProfile>
+            </activatedProfiles>
         </action>
         <action>
             <actionName>CUSTOM-Site</actionName>
@@ -65,5 +68,15 @@
             <goals>
                 <goal>checkstyle:checkstyle</goal>
             </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Site deploy</actionName>
+            <displayName>Site deploy</displayName>
+            <goals>
+                <goal>site:deploy</goal>
+            </goals>
+            <activatedProfiles>
+                <activatedProfile>all</activatedProfile>
+            </activatedProfiles>
         </action>
     </actions>
