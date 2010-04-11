@@ -23,6 +23,7 @@ import java.util.ResourceBundle;
 /**
  *
  * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ * @version $Revision$, $Date$
  */
 public final class Messages {
     private static final String BUNDLE_NAME = "pl.kacprzak.wkuwacz.messages";

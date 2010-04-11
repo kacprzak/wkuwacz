@@ -24,6 +24,7 @@ import org.eclipse.swt.widgets.Shell;
 /**
  *
  * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ * @version $Revision$, $Date$
  */
 public final class SWTUtil {
 

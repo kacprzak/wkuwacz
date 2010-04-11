@@ -20,6 +20,7 @@ package pl.kacprzak.wkuwacz.words;
 /**
  *
  * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ * @version $Revision$, $Date$
  */
 public interface IWords {
 

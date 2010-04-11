@@ -24,6 +24,7 @@ import java.util.Scanner;
 /**
  *
  * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ * @version $Revision$, $Date$
  */
 public final class WordsFactory {
 

@@ -23,6 +23,7 @@ import java.util.HashSet;
 /**
  *
  * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ * @version $Revision$, $Date$
  */
 class Words implements IWords {
 

@@ -34,6 +34,7 @@ import org.eclipse.swt.widgets.Shell;
 /**
  *
  * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ * @version $Revision$, $Date$
  */
 public final class AboutDialog extends Dialog {
     private Font font;
