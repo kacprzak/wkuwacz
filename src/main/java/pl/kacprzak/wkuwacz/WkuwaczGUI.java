@@ -44,6 +44,7 @@ import org.eclipse.swt.widgets.Text;
 /**
  *
  * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ * @version $Revision$, $Date$ 
  */
 class WkuwaczGUI {
 

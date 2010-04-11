@@ -36,6 +36,7 @@ import pl.kacprzak.wkuwacz.words.IWords.Type;
 /**
  *
  * @author Marcin Kacprzak <martin.kacprzak at gmail.com>
+ * @version $Revision$, $Date$
  */
 public final class WkuwaczApp extends WkuwaczGUI {
 
